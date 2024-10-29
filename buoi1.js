@@ -20,7 +20,7 @@
 
 // printName(my_arr);
 
-let my_arr =[`a`,`b`,`c`]
+// let my_arr =[`a`,`b`,`c`]
 
 // function printName(my_arr){
 //     for(let i in my_arr)
@@ -36,14 +36,40 @@ let my_arr =[`a`,`b`,`c`]
 
 // printName(my_arr);
 
-function printName(my_arr){
-    forEach(function(){
+// function printName(my_arr){
+//     forEach(function(){
 
+//     })
+//         console.log();
+// }
+
+// printName(my_arr);
+
+
+let ny_obj=[
+    {
+    name:"Công",
+    age:19
+    },
+    {
+    name:"Bảo",
+    age:20
+    },
+        
+]
+
+function printFull(ny_obj){
+    let html= ny_obj.map(function(ny){
+        return `
+        <li>
+        <h2>${ny.name}</h2>
+        ${ny.age}
+        </li>
+        `
     })
-        console.log();
+    let htmls=html.join('')
+    document.querySelector('.show').innerHTML=htmls
 }
 
-printName(my_arr);
 
-
-
+printFull(ny_obj)
